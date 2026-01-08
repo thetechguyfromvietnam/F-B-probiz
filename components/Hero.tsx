@@ -42,12 +42,14 @@ export default function Hero({ onContact }: HeroProps) {
             </div>
 
             <div className="flex gap-4">
-              <button
-                onClick={onContact}
-                className="bg-primary-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-700 transition transform hover:scale-105 shadow-lg"
+              <a
+                href="https://zalo.me/0978270038"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-700 transition transform hover:scale-105 shadow-lg text-center"
               >
                 Nhận tư vấn miễn phí
-              </button>
+              </a>
               <button 
                 onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-50 transition"

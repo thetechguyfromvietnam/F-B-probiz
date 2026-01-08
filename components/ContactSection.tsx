@@ -29,8 +29,10 @@ export default function ContactSection({ onContact }: ContactSectionProps) {
                     <Phone className="w-6 h-6 text-primary-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Điện thoại</h4>
-                    <p className="text-gray-600">0978270038</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">Điện thoại / Zalo</h4>
+                    <a href="https://zalo.me/0978270038" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-semibold">
+                      0978270038
+                    </a>
                   </div>
                 </div>
 
@@ -77,15 +79,20 @@ export default function ContactSection({ onContact }: ContactSectionProps) {
             </p>
             
             <div className="space-y-4">
-              <button
-                onClick={onContact}
-                className="w-full bg-white text-primary-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-50 transition shadow-lg"
+              <a
+                href="https://zalo.me/0978270038"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-white text-primary-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-50 transition shadow-lg text-center block"
               >
                 Nhận báo giá miễn phí
-              </button>
-              <button className="w-full border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition">
+              </a>
+              <a
+                href="tel:0978270038"
+                className="w-full border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition text-center block"
+              >
                 Gọi ngay: 0978270038
-              </button>
+              </a>
             </div>
 
             <div className="mt-8 pt-8 border-t border-primary-500">

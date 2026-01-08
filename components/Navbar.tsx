@@ -30,12 +30,14 @@ export default function Navbar({ onContact }: NavbarProps) {
             <Link href="#packages" className="text-gray-700 hover:text-primary-600 transition">
               Gói dịch vụ
             </Link>
-            <button
-              onClick={onContact}
+            <a
+              href="https://zalo.me/0978270038"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition"
             >
               Tư vấn miễn phí
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -59,12 +61,14 @@ export default function Navbar({ onContact }: NavbarProps) {
             <Link href="#packages" className="block py-2 text-gray-700 hover:text-primary-600">
               Gói dịch vụ
             </Link>
-            <button
-              onClick={onContact}
-              className="w-full mt-4 bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700"
+            <a
+              href="https://zalo.me/0978270038"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full mt-4 bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 text-center block"
             >
               Tư vấn miễn phí
-            </button>
+            </a>
           </div>
         )}
       </div>
