@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  image       String?
+  dishes      Dish[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Dish {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  price       Float
+  image       String?
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  available   Boolean  @default(true)
+  featured    Boolean  @default(false)
+  orderItems  OrderItem[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Table {
+  id          String   @id @default(cuid())
+  number      String   @unique
+  capacity    Int
+  status      TableStatus @default(AVAILABLE)
+  reservations Reservation[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum TableStatus {
+  AVAILABLE
+  OCCUPIED
+  RESERVED
+  MAINTENANCE
+}
+
+model Reservation {
+  id          String   @id @default(cuid())
+  customerName String
+  phone       String
+  email       String?
+  guests      Int
+  date        DateTime
+  tableId     String
+  table       Table    @relation(fields: [tableId], references: [id])
+  status      ReservationStatus @default(PENDING)
+  specialRequests String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  SEATED
+  CANCELLED
+  COMPLETED
+}
+
+model Order {
+  id          String   @id @default(cuid())
+  customerName String
+  phone       String
+  tableId     String?
+  status      OrderStatus @default(PENDING)
+  total       Float
+  items       OrderItem[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PREPARING
+  READY
+  SERVED
+  CANCELLED
+}
+
+model OrderItem {
+  id       String @id @default(cuid())
+  orderId  String
+  order    Order  @relation(fields: [orderId], references: [id])
+  dishId   String
+  dish     Dish   @relation(fields: [dishId], references: [id])
+  quantity Int
+  price    Float
+  notes    String?
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  content     String
+  image       String?
+  published   Boolean  @default(false)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
