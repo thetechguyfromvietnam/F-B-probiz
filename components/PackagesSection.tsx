@@ -9,7 +9,7 @@ export default function PackagesSection() {
       tagline: 'Website cơ bản cho quán ăn',
       price: '3',
       priceRange: 'triệu',
-      originalPrice: '3.5',
+      originalPrice: '4',
       description: 'Phù hợp cho: Quán cà phê nhỏ, tiệm ăn, quán take-away mới bắt đầu',
       features: [
         'Thiết kế responsive (mobile, tablet, desktop)',
@@ -27,9 +27,9 @@ export default function PackagesSection() {
     {
       name: 'GÓI PROFESSIONAL',
       tagline: 'Website đầy đủ tính năng',
-      price: '5.5',
+      price: '7',
       priceRange: 'triệu',
-      originalPrice: '6.5',
+      originalPrice: '8.5',
       description: 'Phù hợp cho: Nhà hàng, quán ăn trẻ trung, cần đặt bàn online',
       features: [
         'Tất cả tính năng gói Starter',
@@ -50,9 +50,9 @@ export default function PackagesSection() {
     {
       name: 'GÓI PREMIUM',
       tagline: 'Website cao cấp toàn diện',
-      price: '10',
+      price: '15',
       priceRange: 'triệu',
-      originalPrice: '12',
+      originalPrice: '18',
       description: 'Phù hợp cho: Nhà hàng cao cấp, chuỗi quán ăn, cần đặt món online',
       features: [
         'Tất cả tính năng gói Professional',

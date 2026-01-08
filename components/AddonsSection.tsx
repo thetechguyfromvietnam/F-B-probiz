@@ -7,11 +7,11 @@ export default function AddonsSection() {
     {
       category: 'Tính năng nâng cao',
       items: [
-        { name: 'Tích hợp đặt món online (food ordering)', price: '2.200.000 VNĐ' },
-        { name: 'Hệ thống đặt bàn nâng cao (chọn bàn, thời gian)', price: '1.300.000 VNĐ' },
-        { name: 'Tích hợp thanh toán online (Momo, ZaloPay, VNPay)', price: '1.800.000 VNĐ' },
-        { name: 'Chatbot Facebook Messenger tự động', price: '1.200.000 VNĐ' },
-        { name: 'Hệ thống quản lý khách hàng (CRM)', price: '2.500.000 VNĐ' },
+        { name: 'Tích hợp đặt món online (food ordering)', price: '2.500.000 VNĐ' },
+        { name: 'Hệ thống đặt bàn nâng cao (chọn bàn, thời gian)', price: '1.500.000 VNĐ' },
+        { name: 'Tích hợp thanh toán online (Momo, ZaloPay, VNPay)', price: '2.000.000 VNĐ' },
+        { name: 'Chatbot Facebook Messenger tự động', price: '1.500.000 VNĐ' },
+        { name: 'Hệ thống quản lý khách hàng (CRM)', price: '3.000.000 VNĐ' },
       ]
     },
     {
@@ -37,8 +37,8 @@ export default function AddonsSection() {
       category: 'Hệ thống & Dịch vụ',
       items: [
         { name: 'Hệ thống tích điểm, voucher online', price: '2.200.000 VNĐ' },
-        { name: 'App mobile (iOS/Android) cơ bản', price: '6.500.000 VNĐ' },
-        { name: 'Tích hợp POS system', price: '3.000.000 VNĐ' },
+        { name: 'App mobile (iOS/Android) cơ bản', price: '8.000.000 VNĐ' },
+        { name: 'Tích hợp POS system', price: '3.500.000 VNĐ' },
         { name: 'Dịch vụ quản lý nội dung hàng tháng', price: '1.200.000 VNĐ/tháng' },
         { name: 'Dịch vụ marketing online (SEO, Google Ads)', price: '2.500.000 VNĐ/tháng' },
         { name: 'Hosting & Domain (1 năm)', price: '1.000.000 VNĐ/năm' },
