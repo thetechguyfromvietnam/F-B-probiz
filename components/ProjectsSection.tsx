@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react'
 import { memo } from 'react'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -47,19 +48,13 @@ function ProjectsSection() {
             >
               {/* Food Image */}
               <div className="h-64 relative overflow-hidden bg-gray-100 group cursor-pointer" onClick={() => window.open(project.url, '_blank')}>
-                {/* Food Image */}
-                <img
+                <Image
                   src={project.image}
                   alt={`${project.name} - Món ăn`}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
-                  onError={(e) => {
-                    // Fallback to gradient if image fails
-                    const target = e.currentTarget as HTMLImageElement
-                    target.style.display = 'none'
-                    const fallback = target.nextElementSibling as HTMLElement
-                    if (fallback) fallback.style.display = 'flex'
-                  }}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={85}
                 />
                 
                 {/* Fallback gradient */}
