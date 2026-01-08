@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   images: {
-    domains: ['localhost', 'res.cloudinary.com'],
+    domains: ['localhost', 'res.cloudinary.com', 'images.unsplash.com'],
     formats: ['image/avif', 'image/webp'],
   },
   experimental: {

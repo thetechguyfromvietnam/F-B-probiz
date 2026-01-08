@@ -12,22 +12,22 @@ const categories = [
 
 const dishes = {
   appetizers: [
-    { id: 1, name: 'Nem nướng', price: 120000, image: '/dish-1.jpg', description: 'Nem nướng thơm ngon' },
-    { id: 2, name: 'Gỏi cuốn', price: 80000, image: '/dish-2.jpg', description: 'Gỏi cuốn tươi ngon' },
-    { id: 3, name: 'Chả giò', price: 95000, image: '/dish-3.jpg', description: 'Chả giò giòn rụm' },
+    { id: 1, name: 'Nem nướng', price: 120000, description: 'Nem nướng thơm ngon' },
+    { id: 2, name: 'Gỏi cuốn', price: 80000, description: 'Gỏi cuốn tươi ngon' },
+    { id: 3, name: 'Chả giò', price: 95000, description: 'Chả giò giòn rụm' },
   ],
   main: [
-    { id: 4, name: 'Phở bò', price: 150000, image: '/dish-4.jpg', description: 'Phở bò truyền thống' },
-    { id: 5, name: 'Cơm gà', price: 140000, image: '/dish-5.jpg', description: 'Cơm gà thơm lừng' },
-    { id: 6, name: 'Bún chả', price: 130000, image: '/dish-6.jpg', description: 'Bún chả Hà Nội' },
+    { id: 4, name: 'Phở bò', price: 150000, description: 'Phở bò truyền thống' },
+    { id: 5, name: 'Cơm gà', price: 140000, description: 'Cơm gà thơm lừng' },
+    { id: 6, name: 'Bún chả', price: 130000, description: 'Bún chả Hà Nội' },
   ],
   dessert: [
-    { id: 7, name: 'Chè thập cẩm', price: 45000, image: '/dish-7.jpg', description: 'Chè thập cẩm tươi mát' },
-    { id: 8, name: 'Bánh flan', price: 55000, image: '/dish-8.jpg', description: 'Bánh flan ngọt ngào' },
+    { id: 7, name: 'Chè thập cẩm', price: 45000, description: 'Chè thập cẩm tươi mát' },
+    { id: 8, name: 'Bánh flan', price: 55000, description: 'Bánh flan ngọt ngào' },
   ],
   drinks: [
-    { id: 9, name: 'Nước cam', price: 40000, image: '/dish-9.jpg', description: 'Nước cam tươi' },
-    { id: 10, name: 'Cà phê phin', price: 35000, image: '/dish-10.jpg', description: 'Cà phê đậm đà' },
+    { id: 9, name: 'Nước cam', price: 40000, description: 'Nước cam tươi' },
+    { id: 10, name: 'Cà phê phin', price: 35000, description: 'Cà phê đậm đà' },
   ],
 }
 
