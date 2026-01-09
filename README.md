@@ -1,14 +1,14 @@
-# Website Demo - Dịch vụ Thiết kế Website cho Quán Ăn
+# Probiz - Website Marketing Platform cho Quán Ăn
 
 Website demo hoàn chỉnh để showcase dịch vụ thiết kế website cho các quán ăn với giá ưu đãi.
 
 ## 🚀 Tính năng
 
 - **Trang chủ hiện đại**: Hero section với thông tin giá và thời gian
-- **Bảng giá 3 gói**: Starter (2.5M), Professional (4.5M), Premium (8M)
+- **Bảng giá 3 gói**: Starter (3M), Professional (7M), Premium (15M)
 - **Tính năng add-on**: Danh sách đầy đủ các tính năng bổ sung với giá
 - **Portfolio**: Hiển thị các dự án đã hoàn thành
-- **Form liên hệ**: Modal để khách hàng đăng ký tư vấn
+- **Form liên hệ**: Link Zalo để khách hàng đăng ký tư vấn
 - **Responsive design**: Tối ưu cho mobile, tablet, desktop
 
 ## 📦 Cài đặt
@@ -29,39 +29,31 @@ npm start
 
 Website sẽ chạy tại: http://localhost:3000
 
-## 🎨 Cấu trúc
+## 📚 Tài liệu
 
-- `/app` - Next.js app router
-- `/components` - React components
-  - `Hero.tsx` - Section đầu trang
-  - `PackagesSection.tsx` - Bảng giá 3 gói
-  - `AddonsSection.tsx` - Tính năng bổ sung
-  - `FeaturesSection.tsx` - Tính năng nổi bật
-  - `ProjectsSection.tsx` - Portfolio
-  - `ContactSection.tsx` - Thông tin liên hệ
-  - `ContactModal.tsx` - Form liên hệ
-  - `Navbar.tsx` - Navigation bar
-  - `Footer.tsx` - Footer
+Tất cả tài liệu được lưu trong folder `docs/`:
+
+- `docs/sales-guide/` - Hướng dẫn sales và build website
+- `docs/tin-nhan-sales-nha-hang-gia-cao.md` - Script sales cho nhà hàng giá cao
+- `docs/HUONG_DAN_CHAY_WEBSITE.md` - Hướng dẫn chạy website
+- `docs/README-project.md` - Chi tiết về project
 
 ## 💰 Bảng giá
 
 ### Gói cơ bản:
-- **Starter**: 2.500.000 VNĐ (7-10 ngày)
-- **Professional**: 4.500.000 VNĐ (10-15 ngày) - Khuyến mãi
-- **Premium**: 8.000.000 VNĐ (15-20 ngày)
+- **Starter**: 3.000.000 VNĐ (7-10 ngày)
+- **Professional**: 7.000.000 VNĐ (10-15 ngày) - Khuyến mãi
+- **Premium**: 15.000.000 VNĐ (15-20 ngày)
 
 ### Tính năng add-on:
-- Từ 500.000 VNĐ đến 5.500.000 VNĐ
+- Từ 600.000 VNĐ đến 8.000.000 VNĐ
 - Xem chi tiết trong component `AddonsSection`
 
-## 📝 Cập nhật thông tin
+## 📞 Liên hệ
 
-Để cập nhật thông tin liên hệ, giá cả, hoặc nội dung:
-
-1. **Giá các gói**: Sửa trong `components/PackagesSection.tsx`
-2. **Tính năng add-on**: Sửa trong `components/AddonsSection.tsx`
-3. **Thông tin liên hệ**: Sửa trong `components/ContactSection.tsx`
-4. **Hero content**: Sửa trong `components/Hero.tsx`
+- **Zalo**: [0978270038](https://zalo.me/0978270038)
+- **Email**: thestoriesguys@gmail.com
+- **Địa chỉ**: Nhà B Lô CD Chung Cư Bình Khánh, Quận 2, TP.HCM
 
 ## 🎯 Mục đích
 
@@ -71,8 +63,14 @@ Website này được tạo để:
 - Thu thập thông tin liên hệ từ khách hàng tiềm năng
 - Tăng độ tin cậy và chuyên nghiệp
 
-## 📞 Liên hệ
+## 🛠️ Tech Stack
 
-- Email: thestoriesguys@gmail.com
-- Hotline: 0978270038
-- Địa chỉ: Nhà B Lô CD Chung Cư Bình Khánh, Quận 2, TP.HCM
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+
+## 📝 License
+
+Private project - All rights reserved
+
