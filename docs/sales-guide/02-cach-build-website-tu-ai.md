@@ -4,6 +4,286 @@
 
 Hướng dẫn sử dụng AI (ChatGPT, Claude, Cursor AI) để build website cho quán ăn một cách hiệu quả.
 
+## 🚀 Tự động Build Website từ Nội dung có sẵn
+
+### Khi đã có sẵn: Nội dung, Hình ảnh, Menu
+
+Nếu bạn đã có sẵn:
+- ✅ Nội dung quán ăn (tên quán, mô tả, địa chỉ, SĐT)
+- ✅ Hình ảnh (logo, ảnh món ăn, ảnh quán)
+- ✅ Menu (danh sách món ăn với giá)
+
+Bạn có thể sử dụng AI để tự động build website hoàn chỉnh!
+
+### Prompt Template: Build Website Tự động
+
+```
+Tôi đã có sẵn nội dung và muốn build website quán ăn tự động:
+
+**Thông tin quán:**
+- Tên quán: [Tên quán]
+- Địa chỉ: [Địa chỉ]
+- SĐT: [Số điện thoại]
+- Email: [Email]
+- Giờ mở cửa: [Giờ]
+- Mô tả: [Mô tả ngắn về quán]
+
+**Menu (đã có sẵn):**
+[Paste menu ở đây - có thể là Excel, Word, hoặc text]
+
+**Hình ảnh:**
+- Logo: [đường dẫn hoặc mô tả]
+- Ảnh món ăn: [danh sách hoặc folder]
+- Ảnh quán: [đường dẫn]
+
+**Yêu cầu:**
+1. Framework: Next.js 14 với App Router
+2. Styling: Tailwind CSS
+3. Language: TypeScript
+4. Tự động tạo:
+   - Trang chủ với hero section (dùng tên quán và mô tả)
+   - Trang menu động (từ menu đã có)
+   - Trang đặt bàn online
+   - Trang liên hệ (từ thông tin đã có)
+   - Responsive design
+   - SEO optimized
+
+Hãy tạo toàn bộ website với nội dung từ thông tin trên.
+```
+
+### Prompt: Xử lý Menu từ Excel/Word
+
+```
+Tôi có menu quán ăn trong file Excel/Word với format:
+- Cột 1: Tên món
+- Cột 2: Giá
+- Cột 3: Mô tả (nếu có)
+- Cột 4: Category (Khai vị, Món chính, etc.)
+
+[Paste nội dung menu hoặc mô tả format]
+
+Hãy:
+1. Parse menu này thành JSON format
+2. Tạo TypeScript types cho menu
+3. Tạo component MenuSection để hiển thị menu này
+4. Tự động phân loại theo category
+5. Format giá tiền VNĐ đúng cách
+```
+
+### Prompt: Tạo Component từ Menu Data
+
+```
+Tôi có menu data như sau:
+[Paste JSON menu data]
+
+Tạo component MenuSection với:
+- Hiển thị menu theo category
+- Filter theo category
+- Grid layout responsive
+- Mỗi món có: hình ảnh (placeholder nếu chưa có), tên, mô tả, giá
+- Nút "Thêm vào giỏ" (nếu có tính năng đặt món)
+- Sử dụng Next.js Image component
+- Tailwind CSS
+- TypeScript
+```
+
+### Prompt: Tạo Trang chủ từ Thông tin Quán
+
+```
+Tạo trang chủ (Homepage) cho quán ăn với thông tin:
+
+**Thông tin quán:**
+- Tên: [Tên quán]
+- Tagline: [Câu slogan]
+- Mô tả: [Mô tả chi tiết]
+- Địa chỉ: [Địa chỉ]
+- SĐT: [SĐT]
+- Email: [Email]
+- Giờ mở cửa: [Giờ]
+
+**Hình ảnh:**
+- Logo: [mô tả hoặc đường dẫn]
+- Hero image: [mô tả]
+
+**Yêu cầu:**
+1. Hero section với tên quán và tagline nổi bật
+2. About section với mô tả quán
+3. Features section (3-4 điểm nổi bật)
+4. Menu preview (hiển thị 6-8 món nổi bật)
+5. Contact section với thông tin liên hệ
+6. CTA buttons: "Xem menu", "Đặt bàn", "Liên hệ"
+7. Responsive design
+8. SEO optimized với meta tags
+
+Sử dụng Next.js 14, TypeScript, Tailwind CSS.
+```
+
+### Prompt: Tự động tạo Database Schema từ Menu
+
+```
+Tôi có menu với các món ăn như sau:
+[Paste menu data]
+
+Tạo Prisma schema để lưu trữ menu này với:
+1. Model Category (Danh mục món ăn)
+2. Model Dish (Món ăn) với các trường:
+   - id, name, description, price, image, categoryId
+   - available (boolean), featured (boolean)
+   - createdAt, updatedAt
+
+3. Seed data: Tạo file seed.ts để import menu vào database
+
+4. API routes để:
+   - GET /api/menu - Lấy tất cả menu
+   - GET /api/menu/[category] - Lấy menu theo category
+   - GET /api/menu/[id] - Lấy chi tiết món ăn
+```
+
+### Prompt: Tự động Upload và Optimize Hình ảnh
+
+```
+Tôi có folder chứa hình ảnh món ăn:
+- Đường dẫn: [đường dẫn folder]
+- Format: JPG, PNG
+- Tên file: [pattern tên file, ví dụ: "mon-1.jpg", "mon-2.jpg"]
+
+Hãy:
+1. Tạo script để tự động:
+   - Đọc tất cả hình ảnh trong folder
+   - Resize và optimize hình ảnh (sử dụng sharp hoặc next/image)
+   - Copy vào folder public/images/
+   - Tạo mapping giữa tên file và món ăn
+
+2. Tích hợp vào component MenuSection để tự động load hình ảnh
+
+3. Sử dụng Next.js Image component với lazy loading
+```
+
+### Workflow Tự động Build Website
+
+#### Bước 1: Chuẩn bị Dữ liệu
+```
+1. Thu thập thông tin quán:
+   - Tên, địa chỉ, SĐT, email
+   - Mô tả, giờ mở cửa
+   - Logo, hình ảnh quán
+
+2. Chuẩn bị menu:
+   - Export từ Excel/Word sang JSON
+   - Hoặc paste trực tiếp vào prompt
+   - Đảm bảo có: Tên món, Giá, Category
+
+3. Chuẩn bị hình ảnh:
+   - Tổ chức vào folder
+   - Đặt tên file rõ ràng
+   - Tối ưu kích thước (max 2MB/mỗi ảnh)
+```
+
+#### Bước 2: Tạo Project Structure
+```
+Prompt: "Tạo Next.js 14 project với App Router cho quán ăn [Tên quán]"
+```
+
+#### Bước 3: Import Menu Data
+```
+Prompt: "Parse menu này và tạo database schema + seed data:
+[Paste menu data]"
+```
+
+#### Bước 4: Tạo Components
+```
+Prompt: "Tạo component MenuSection từ menu data đã có"
+Prompt: "Tạo component HeroSection với thông tin quán [thông tin]"
+Prompt: "Tạo component ContactSection với thông tin liên hệ [thông tin]"
+```
+
+#### Bước 5: Tích hợp Hình ảnh
+```
+Prompt: "Tạo script để import hình ảnh từ folder [đường dẫn] 
+và tích hợp vào menu"
+```
+
+#### Bước 6: Tạo Pages
+```
+Prompt: "Tạo trang chủ với tất cả components đã tạo"
+Prompt: "Tạo trang menu đầy đủ"
+Prompt: "Tạo trang đặt bàn"
+```
+
+#### Bước 7: SEO và Optimization
+```
+Prompt: "Thêm SEO meta tags cho website quán ăn [Tên quán]"
+Prompt: "Optimize images và performance"
+```
+
+### Prompt Template: Full Auto Build
+
+```
+Tôi muốn build website quán ăn tự động với thông tin có sẵn:
+
+**THÔNG TIN QUÁN:**
+```
+Tên quán: [Tên]
+Địa chỉ: [Địa chỉ]
+SĐT: [SĐT]
+Email: [Email]
+Giờ mở cửa: [Giờ]
+Mô tả: [Mô tả]
+```
+
+**MENU:**
+```
+[Paste menu ở đây - format: Tên món | Giá | Category | Mô tả]
+```
+
+**HÌNH ẢNH:**
+- Logo: [đường dẫn]
+- Folder ảnh món: [đường dẫn folder]
+
+**YÊU CẦU:**
+1. Tạo Next.js 14 project với TypeScript và Tailwind CSS
+2. Tự động parse menu và tạo database schema
+3. Tạo tất cả components cần thiết
+4. Tạo pages: Home, Menu, Booking, Contact
+5. Tích hợp hình ảnh tự động
+6. SEO optimized
+7. Responsive design
+
+Hãy build toàn bộ website với nội dung từ thông tin trên.
+```
+
+### Ví dụ: Menu Format để Paste vào AI
+
+```
+Format menu để paste vào prompt:
+
+KHAI VỊ:
+- Gỏi cuốn | 80,000 | Khai vị | Gỏi cuốn tươi ngon với tôm và thịt
+- Nem nướng | 120,000 | Khai vị | Nem nướng thơm ngon
+- Chả giò | 95,000 | Khai vị | Chả giò giòn rụm
+
+MÓN CHÍNH:
+- Phở bò | 150,000 | Món chính | Phở bò truyền thống với nước dùng đậm đà
+- Bún chả | 130,000 | Món chính | Bún chả Hà Nội
+- Cơm gà | 140,000 | Món chính | Cơm gà thơm lừng
+
+TRÁNG MIỆNG:
+- Chè thập cẩm | 45,000 | Tráng miệng | Chè thập cẩm tươi mát
+- Bánh flan | 55,000 | Tráng miệng | Bánh flan ngọt ngào
+
+ĐỒ UỐNG:
+- Cà phê phin | 35,000 | Đồ uống | Cà phê đậm đà
+- Nước cam | 40,000 | Đồ uống | Nước cam tươi
+```
+
+### Tips khi Build Tự động
+
+1. **Chuẩn bị dữ liệu tốt**: Menu rõ ràng, thông tin đầy đủ
+2. **Format nhất quán**: Dùng format chuẩn để AI parse dễ hơn
+3. **Kiểm tra kỹ**: Review code AI tạo, đặc biệt là data parsing
+4. **Test thực tế**: Test với dữ liệu thật trước khi deploy
+5. **Tối ưu sau**: Sau khi build xong, tối ưu performance và SEO
+
 ## 📋 Prompt Template Cơ bản
 
 ### Prompt 1: Khởi tạo Project
